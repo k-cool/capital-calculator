@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Header, TextInput } from '../components/atoms';
+
+import { Header } from 'components/molecules';
+import { SideNav } from 'components/organisms';
 
 export default function Home() {
   return (
     <StHomepage>
       <StHeaderDiv>
-        <Header>SNOW BALL CALCULATOR</Header>
+        <Header text='SNOW BALL CALCULATOR' emoji='❄' />
       </StHeaderDiv>
-      <StNav></StNav>
       <StMain>
+        <SideNav />
         <StLeftDiv></StLeftDiv>
         <StRightDiv></StRightDiv>
       </StMain>
@@ -24,14 +26,15 @@ const StHomepage = styled.div`
   width: 100vw;
 `;
 
-const StMain = styled.main``;
 const StHeaderDiv = styled.div`
   width: 100%;
   background-color: rgb(46, 44, 44);
   text-align: center;
 `;
 
-const StNav = styled.nav``;
+const StMain = styled.main`
+  width: 100%;
+`;
 
 const StLeftDiv = styled.div``;
 const StRightDiv = styled.div``;
