@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Header } from 'components/molecules';
-import { SideNav } from 'components/organisms';
+import { InputBoard, OutputBoard, SideNav } from 'components/organisms';
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
       </StHeaderDiv>
       <StMain>
         <SideNav />
-        <StLeftDiv></StLeftDiv>
-        <StRightDiv></StRightDiv>
+        <InputBoard />
+        <OutputBoard />
       </StMain>
     </StHomepage>
   );
@@ -33,6 +33,8 @@ const StHeaderDiv = styled.div`
 `;
 
 const StMain = styled.main`
+  display: flex;
+
   width: 100%;
 `;
 
